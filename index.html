@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./images/basketball-ball.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Task-management</title>
+</head>
+<body>
+
+  <div class="big-container">
+  <!-- Left Container -->
+    <nav class="left-container">
+      <div class="left-top">
+        <div class="close-icon-left">
+        <i class="material-icons">close</i>
+        </div>
+        <img src="./images/crypto-logo.png" alt="Crypto-logo" class="logo">
+        <i class="material-icons home-icon">home</i>
+        <i class="material-icons">person</i>
+        <i class="material-icons sms-icon">sms</i>
+        <i class="material-icons">settings</i>
+        <i class="material-icons">play_arrow</i>
+        <i class="material-icons star-icon">star_outline</i>
+        <i class="material-icons">history</i>
+        <i class="material-icons">import_export</i>
+      </div>
+      <div class="left-bottom bg-primary">
+        <i class="material-icons">add</i>
+      </div>
+    </nav>
+
+  <!-- Middle Container -->
+    <main class="middle-container">
+      <!--  Top of the middle Container with the navbar section and the credit card section -->
+      <section class="middle-top">
+        <div class="middle-top-header">
+          <div class="profile">
+            <div class="menu-icon">
+            <i class="material-icons">menu</i>
+            </div>
+            <img src="./images/profile.jpg" alt="profile-picture" class="profile-img">
+            <h3 id="greeting">Hi People!</h3>
+          </div>
+
+
+          <div class="middle-top-right">
+            <div class="account">
+              <select name="account" id="account" class="bg-light-purple">
+                <option value="Choose Account">Choose Account</option>
+                <option value="Google">Google</option>
+                <option value="Github">Github</option>
+                <option value="Apple">Apple</option>
+                <option value="Amazon">Amazon</option>
+              </select>
+
+            </div>
+          <div class="message bg-primary">
+            <i class="material-icons">forum</i>
+          </div>
+          <div class="side-right-icon">
+          <i class="material-icons ">first_page</i>
+          </div>
+          </div>
+        </div>
+        <div class="middle-top-main">
+          <div class="total-earning">
+            <div class="earn-icon bg-sea-green">
+              <i class="material-icons ">stacked_line_chart</i>
+            </div>
+            <div class="earn-number">
+              <small>Total earnings</small>
+              <h3>$14,786.00</h3>
+            </div>
+          </div>
+          <div class="month-goal">
+            <div class="month-icon bg-beige">
+              <i class="material-icons">dashboard</i>
+            </div>
+            <div class="month-number">
+              <small>Goal for this month</small>
+              <h3>$17,963.92</h3>
+            </div>
+          </div>
+          <div class="credit-card">
+            <div class="credit-top">
+              <div class="credit-name">
+                <small class="sx">Name Card</small>
+                <small class="bold">Patrick</small>
+              </div>
+              <div class="credit-type">
+              <img src="./images/visa.png" alt="visa-img" class="visa-img"/>
+              </div>
+            </div>
+            <div class="credit-middle">
+              <small>***  ***  ***  123</small>
+            </div>
+            <div class="credit-bottom">
+              <div class="date">
+                <small class="color-gray sx">EXP DATE</small>
+                <small class="sx bold">12/25</small>
+              </div>
+              <div class="cvv-number">
+                <small class="color-gray sx ">CVV NUMBER</small>
+                <small class="sx bold">123</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="total-spending">
+            <div class="spend-icon bg-papaya-color">
+              <i class="material-icons">auto_graph</i>
+
+            </div>
+            <div class="spend-number">
+              <small>Total Spendings</small>
+              <h3>$4,875.91</h3>
+            </div>
+          </div>
+          <div class="spending-goal">
+            <div class="spend-goal-icon bg-sky-blue">
+              <i class="material-icons">shopping_bag</i>
+            </div>
+            <div class="spend-goal-number">
+              <small>Spending Goal</small>
+              <h3>$6,817.00</h3>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Middle part of the middle container with ACTIVITY SUMMARY/ SPENDING SUMMARY AND INCOME SUMMARY titles -->
+      <div class="middle-middle">
+      <p>ACTIVITY SUMMARY</p>
+      <p class="color-gray">SPENDING SUMMARY</p>
+      <p class="color-gray">INCOME SUMMARY</p>
+      </div>
+
+      <!-- Bottom part of the middle container -->
+      <section class="middle-bottom">
+
+<!-- First column of the bottom part -->
+      <div class="middle-bottome-1">
+      <div class="middle-bottom1-header">
+        <p>Activity Graph</p>
+        <h4>$186K</h4>
+      </div>
+      <!-- Graph area in the first column of the bottom part -->
+      <div class="middle-bottom1-graph">
+        <canvas id="myChart"></canvas>
+      </div>
+    <!-- Rows of Activities in the first column of the bottom part -->
+      <div class="middle-bottom1-activity">
+    <!-- Row 1 -->
+        <div class="monthly-plan">
+          <i class="material-icons bg-light-purple color-purple">date_range</i>
+          <p>Monthly Plan</p>
+          <i class="material-icons">keyboard_arrow_right</i>
+        </div>
+      <!-- Row 2 -->
+        <div class="activity-settings">
+          <i class="material-icons bg-light-purple color-purple">settings</i>
+          <p>Settings</p>
+          <i class="material-icons ">keyboard_arrow_right</i>
+        </div>
+        <!-- Row 3 -->
+        <div class="activity-goals">
+          <i class="material-icons bg-light-purple color-purple">flag</i>
+          <p>Goals</p>
+          <i class="material-icons">keyboard_arrow_right</i>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="activity-shopping">
+          <i class="material-icons bg-light-purple color-purple">shopping_bag</i>
+          <p>Shopping</p>
+          <i class="material-icons">keyboard_arrow_right</i>
+        </div>
+      </div>
+      </div>
+
+      <!-- Second Column of the bottom part -->
+      <div class="middle-bottom-2">
+        <!-- top section of the second column of the bottom part -->
+      <div class="middle-bottom2-header">
+        <div class="bottom2-title">
+          <h5>History</h5>
+          <h5>Upcoming</h5>
+        </div>
+        <div class="bottom2-date">
+          <i class="material-icons">date_range</i>
+          <small id="thedate">03 Jan 22-04 Mar 22</small>
+          <i class="material-icons">settings</i>
+          <i class="material-icons">add</i>
+        </div>
+      </div>
+      <p class="color-gray m-0">March 12 2022</p>
+
+      <!-- Different rows of activities in the 2nd column of the bottom part -->
+
+      <!-- Row 1 -->
+      <div class="bottom2-row1">
+<div class="supplies">
+  <i class="material-icons date_icon">sync_alt</i>
+  <div>
+  <h6 class="date-title">Office supplies</h6>
+  <small class="bottom_date sx">03/10/22 at 4:25 pm</small>
+  </div>
+</div>
+
+<div class="dot">
+  <h1 class="cl-sea-green">.</h1>
+
+<small>Supplies</small>
+
+<i class="material-icons">attach_file</i>
+</div>
+
+<small>-$10,000.00</small>
+
+      </div>
+      <p class="color-gray">02 Apr, 2022</p>
+
+      <!-- Row 2 -->
+      <div class="bottom2-row2">
+        <div class="supplies">
+          <i class="material-icons color-purple">open_in_browser</i>
+          <div>
+          <h6 class="date-title">Pak Transfer</h6>
+          <small class="bottom_date sx">03/23/22 at 5:25 pm</small>
+          </div>
+        </div>
+
+        <div class="dot">
+          <h1 class="cl-papaya">.</h1>
+          <small>Marketing</small>
+          <i class="material-icons">attach_file</i>
+        </div>
+
+        <small class="color-purple">+$50,500.00</small>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="bottom2-row3">
+        <div class="supplies">
+          <i class="material-icons date_icon">sync_alt</i>
+          <div>
+          <h6 class="date-title">Salary Transfer</h6>
+          <small class="bottom_date sx">04/02/22 at 3:15 pm</small>
+          </div>
+        </div>
+
+        <div class="dot">
+          <h1 class="cl-light-purple">.</h1>
+          <small>Office</small>
+          <i class="material-icons">attach_file</i>
+        </div>
+
+
+        <small>-$20,000.00</small>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="bottom2-row4">
+        <div class="supplies">
+          <i class="material-icons date_icon">system_update_alt</i>
+          <div>
+          <h6 class="date-title">Cash Withdrawl</h6>
+          <small class="bottom_date sx">04/06/22 at 2:25 pm</small>
+          </div>
+        </div>
+
+        <div class="dot">
+          <h1 class="cl-orange">.</h1>
+          <small>General</small>
+          <i class="material-icons">attach_file</i>
+        </div>
+
+        <small>-$13,960.00</small>
+      </div>
+
+      </div>
+    </section>
+    </main>
+
+<!-- Right Container -->
+    <section class="right-container">
+    <!-- navbar section of the right container -->
+<div class="right-top">
+  <div class="right-top-header">
+    <div class="close-icon-right">
+    <i class="material-icons">close</i>
+    </div>
+    <h3>Orizon Crypto</h3>
+    <small class="small">Increase your profit</small>
+  </div>
+  <div class="right-top-icons">
+    <i class="material-icons icon-style">search</i>
+    <i class="material-icons icon-style">notifications</i>
+  </div>
+</div>
+
+<!-- Blue Account section  -->
+<div class="account-buttons">
+<div class="right-account-info">
+  <div class="account-info">
+  <p>My Porfolio</p>
+  <h1>$34,010.00</h1>
+  </div>
+  <div class="account-stats">
+    <i class="material-icons">bar_chart</i>
+    <p>+2.5%</p>
+  </div>
+</div>
+
+<div class="buttons">
+  <button class="deposit"> <i class="material-icons">save_alt</i> Deposit</button>
+  <button class="withdraw"> <i class="material-icons">save_alt</i> Withdraw</button>
+</div>
+</div>
+
+  <div class="favorites">
+    <p>Favorites</p>
+    <small class="cl-primary">See All</small>
+  </div>
+
+<!-- Right Container graph area -->
+  <div class="money-stat">
+    <!-- Right Container Bitcoin section with the graph -->
+    <div class="btc">
+    <div class="btc__header">
+      <i class="material-icons bit">currency_bitcoin</i>
+      <div class="btc_name">
+        <small>BTC</small>
+        <small>Bitcoin</small>
+      </div>
+    </div>
+    <canvas id="btc__graph" width="50" height="35"></canvas>
+    <div class="btc__numbers">
+      <p>$20,788</p>
+      <p>+0.25%</p>
+    </div>
+
+    </div>
+
+    <!-- Right Container Ethereum section with the graph -->
+    <div class="eth">
+
+      <div class="eth__header">
+        <i class="material-icons etc">currency_franc</i>
+        <div class="eth_name">
+          <small>ETH</small>
+          <small>Ethereum</small>
+        </div>
+      </div>
+      <canvas id="eth__graph" width="50" height="35"></canvas>
+      <div class="eth__numbers">
+        <p>$21,543</p>
+        <p>+1.56%</p>
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- Right Container live prices section for different currencies -->
+  <p>Live Prices</p>
+  <div class="prices">
+    <!-- Binance price -->
+    <div class="binance">
+      <div class="binance_info">
+        <i class="material-icons bi_icon1">currency_lira</i>
+        <div class="binance_name">
+          <small>Binance</small>
+          <small>BNB</small>
+        </div>
+      </div>
+      <div class="binance_graph">
+        <img src="./images/line-chart.png" alt="binance_graph" id="binance_graph" />
+      </div>
+        <div class="binance_numbers">
+          <small>$18,788</small>
+          <small>+0.15%</small>
+        </div>
+
+    </div>
+<!-- Litecoin price -->
+    <div class="litecoin">
+      <div class="litecoin_info">
+        <i class="material-icons li_icon">currency_ruble</i>
+        <div class="litecoin_name">
+          <small>Litecoin</small>
+          <small>LTC</small>
+        </div>
+      </div>
+
+        <div class="litecoin_graph">
+    <img src="./images/line-chart_2.png" alt="litecoin-graph" id="binance_graph" />
+        </div>
+        <div class="litecoin_numbers">
+          <small>$11,658</small>
+          <small>-0.18%</small>
+        </div>
+
+    </div>
+
+<!-- Ethereum Price -->
+    <div class="ethereum">
+      <div class="ethereum_info">
+          <i class="material-icons etc">currency_franc</i>
+        <div class="ethereum_name">
+          <small>Binance</small>
+          <small>BNB</small>
+        </div>
+      </div>
+
+        <div class="ethereum_graph">
+      <img src="./images/line-chart_1.png" alt="Binance-graph-2" id="binance_graph" />
+        </div>
+        <div class="ethereum_numbers">
+          <small>$21,549</small>
+          <small>+1.56%</small>
+        </div>
+
+    </div>
+<!-- Bitcoin Price -->
+    <div class="bitcoin">
+      <div class="bitcoin_info">
+        <i class="material-icons bit">currency_bitcoin</i>
+        <div class="bitcoin_name">
+          <small>Bitcoin</small>
+          <small>BTC</small>
+        </div>
+      </div>
+
+        <div class="bitcoin_graph">
+      <img src="./images/line-chart_2.png" alt="bitcoin-graph" id="binance_graph"/>
+        </div>
+        <div class="bitcoin_numbers">
+          <small>$20,788</small>
+          <small>+0.25%</small>
+        </div>
+
+    </div>
+  </div>
+</section>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./myChart.js" charset="utf-8"></script>
+  <script src="./lineChart1.js" charset="utf-8"></script>
+</body>
+</html>

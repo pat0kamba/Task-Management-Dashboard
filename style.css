@@ -1,0 +1,686 @@
+/* Import Montserrat and Poppins font family */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Create Variables for colors */
+
+:root
+{
+  --primary-color:#2b00d4;
+  --khaki-color:#f7d06b;
+  --light-purple-color: #d8d6ed;
+  --purple-color:#6f54e1 ;
+  --sky-blue-color:#bbecff ;
+  --orange-color: #fe9e43;
+  --dark-sea-green:#9ccea6;
+  --turquoise-color:#2ee2c4;
+  --light-pink:#feb5a9;
+  --gray-green:#cce7d1;
+  --beige-color:#f0f3de;
+  --papaya-color:#ffc994;
+}
+/* Defining reusable classes for Background color */
+.bg-primary
+{
+  background-color:var(--primary-color);
+}
+.bg-light-purple
+{
+  background-color:var(--light-purple-color);
+}
+.bg-khaki{
+  background-color:var(--khaki-color);
+}
+.bg-sea-green{
+  background-color:var(--dark-sea-green);
+}
+.bg-orange{
+  background-color:var(--orange-color);
+}
+.bg-beige{
+  background-color:var(--beige-color);
+}
+.bg-gray-green{
+  background-color:var(--gray-green);
+}
+.bg-papaya-color{
+  background-color:var(--papaya-color);
+}
+.bg-sky-blue{
+  background-color:var(--sky-blue-color);
+}
+.color-purple{
+  color:var(--purple-color);
+}
+.color-gray{
+  color:#ccc;
+}
+.cl-papaya{
+  color:var(--papaya-color);
+}
+.cl-orange{
+  color:var(--orange-color);
+}
+.cl-light-purple{
+  color:var(--light-purple-color);
+}
+.cl-primary{
+  color:var(--primary-color);
+}
+.cl-sea-green
+{
+  color:var(--dark-sea-green);
+}
+
+/* Defining reusables classes to style icons */
+.icon-style{
+  border-radius:50%;
+  padding:5px;
+  background-color:#fff;
+}
+.small{
+  font-size:12px;
+  font-weight:bold;
+}
+.bit{
+  border-radius:50%;
+  padding:5px;
+  background-color:#333;
+  color:#fff;
+}
+.etc{
+  background-color:var(--orange-color);
+  border-radius:50%;
+  padding:5px;
+  color:#fff;
+
+}
+.bi_icon1{
+  background-color:var(--dark-sea-green);
+  padding:5px;
+  border-radius:50%;
+  color:#fff;
+}
+.li_icon{
+  background-color:var(--primary-color);
+  padding:5px;
+  border-radius:50%;
+  color:#fff;
+}
+.m-0{
+  margin:0;
+}
+.sx{
+  font-size:11px;
+}
+.bold{
+  font-weight:bold;
+}
+
+/* Modern css reset */
+
+*,
+*::before,
+*::after
+{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:'poppins', 'MontserratAlternate', sans-serif;
+  overflow:scroll;
+}
+
+ul[role = 'list'],
+ol[role = 'list']
+{
+list-style:none;
+}
+
+image,
+picture{
+  display:block;
+  max-width:100%;
+}
+
+
+html:focus-within{
+  scroll-behavior:smooth;
+}
+
+h3{
+  margin-top:0;
+}
+
+.close-icon{
+  display:none;
+}
+/* big container */
+
+.big-container{
+  display:grid;
+  grid-template-columns:4em 10fr 4fr;
+  width:100%;
+
+}
+
+/* navbar on the left/ left container */
+.logo{
+  width:30px;
+  height:30px;
+}
+
+.left-container, .left-top{
+  display:flex;
+  flex-direction:column;
+}
+
+.left-container{
+  justify-content:space-between;
+  align-items:center;
+  padding:1em .25em 1.5em;
+  border:1px solid #ccc;
+  background-color:#F9F2ED;
+  opacity:0.9;
+
+}
+
+.left-top{
+  gap:1.5em;
+}
+
+/* style for the add icon at the bottom of left container */
+.left-bottom{
+  padding:0.55em 0.55em 0.10em 0.55em;
+  border-radius:0 12px 12px;
+  color:#fff;
+}
+/* color for the home icon, the star icon and the message icon */
+.home-icon, .star-icon, .sms-icon{
+  color:var(--primary-color);
+}
+
+
+/* middle container */
+/* top container */
+.middle-container{
+  padding:0.25em 0;
+}
+.profile-img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+/* style for the navbar at the top of the middle container */
+.middle-top-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.25em ;
+}
+/* styling for the  profile and the select area*/
+.profile, .middle-top-right{
+  display:flex;
+  align-items:center;
+  gap:0.75em;
+}
+
+/* styling for message icon right next to the dropdown menu */
+.message{
+  padding:0.45em 0.45em 0.07em 0.45em;
+  color:#fff;
+  border-radius:10px;
+}
+
+
+/* styling for the Choose Account dropdown menu */
+#account{
+  padding:7px 15px;
+  border-radius:7px;
+  border:1px solid #fff;
+}
+
+/* Middle-top-main contains the credit card */
+.middle-top-main{
+  display:grid;
+  grid-template-areas:
+  "earning credit credit spending"
+  "month-goal credit credit spend-goal";
+  margin:1.5em 0;
+  padding:0.25em ;
+}
+.total-earning{
+  grid-area:earning;
+  display:flex;
+  margin-bottom:0.5em;
+}
+.month-goal{
+  grid-area:month-goal;
+
+}
+.total-spending{
+  grid-area:spending;
+  margin-bottom:0.5em;
+  justify-content:flex-end;
+
+}
+.spending-goal{
+  grid-area:spend-goal;
+  justify-content:flex-end;
+}
+.month-goal, .total-earning, .total-spending, .spending-goal{
+  display:flex;
+  align-items:center;
+  gap:1.5em;
+}
+
+/* styling for the icons within the middle-top-main section */
+.earn-icon, .month-icon, .spend-icon, .spend-goal-icon{
+  padding:0.75em 0.75em 0.45em;
+  border-radius:7px;
+  flex-grow:1/2;
+}
+.earn-number, .month-number, .spend-number, .spend-goal-number{
+  padding-top:10px;
+  flex-grow:1;
+}
+
+/* Style for the Credit Card */
+.credit-card{
+  grid-area:credit;
+  background-color:var(--khaki-color);
+  width:16em;
+  height:9em;
+  margin:1em 0 0 1em;
+  border-radius:10px;
+  padding:0 1em;
+
+}
+.credit-name{
+  margin:15px 0;
+}
+.credit-name, .date, .cvv-number{
+  display:flex;
+  flex-direction:column;
+}
+
+.credit-top, .credit-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.visa-img{
+  width:45px;
+}
+
+/* middle middle container */
+/* This section contains the titles / ACTIVITY SUMMARY / SPENDING SUMMARY / INCOME SUMMARY */
+.middle-middle{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:4.5em;
+  padding-left:1em;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  margin-top:25px;
+}
+
+/* middle bottom container */
+/* This section has two columns */
+.middle-bottom{
+  display:grid;
+  grid-template-columns:2fr 3fr;
+}
+
+/* middle-bottom-1 */
+/* Styling for the first column in the bottom section of the middle container */
+.middle-bottome-1{
+  padding:0.5em;
+}
+/* styling for the header of this column, and the rows after the graph */
+.middle-bottom1-header,.monthly-plan, .activity-settings,
+.activity-goals, .activity-shopping
+{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.monthly-plan, .activity-settings, .activity-goals, .activity-shopping{
+  margin:0.5em 0.5em;
+}
+
+.middle-bottom1-header, .middle-bottom1-graph{
+  padding:3px;
+}
+.middle-bottom1-header > p, .middle-bottom1-header > h4{
+  margin:3px 0;
+}
+/* styling for the container with the graph */
+.middle-bottom1-graph{
+  margin:5px 0;
+  width:350px;
+  height:195px;
+}
+/* styling for the icons whithin this column */
+.monthly-plan > i, .activity-settings > i, .activity-goals > i, .activity-shopping > i{
+  padding:10px;
+  border-radius:7px;
+
+}
+
+/* middle-bottom-2 */
+/* Styling for the second column in the bottom section of the middle container */
+.middle-bottom-2{
+  padding:0 0.75em;
+  border-left:1px solid #ccc;
+}
+.date-title{
+  margin-bottom:5px;
+}
+.bottom_date{
+  margin-top:0;
+}
+.date_icon, .bottom_date{
+  color:#ccc;
+}
+
+/* styling for the header and the title container */
+.middle-bottom2-header, .bottom2-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.bottom2-title{
+  gap:1.25em;
+}
+
+.bottom2-title > h5{
+  margin:15px 0;
+}
+
+/* styling for the container showing the date and also the container with the colorful dot */
+.bottom2-date, .dot{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 0.5em;
+}
+
+/* the dot container comprises the colorful dot, a title and an attach file icon */
+.dot{
+  width:200px;
+}
+.dot > h1{
+  padding:0 5px ;
+  margin-bottom:1.2em;
+
+}
+.dot > i{
+  color:#333;
+  background-color:rgba(0,0.3,0.4, 0.1);
+  padding:5px;
+  border-radius:7px;
+  font-size:15px;
+}
+
+/* the supplies icon is on the left of each row */
+.supplies{
+  width:160px;
+}
+
+/* styling for all the rows in this second column of the middle-bottom section */
+.bottom2-row1, .supplies,
+.bottom2-row2,.bottom2-row3,
+.bottom2-row4{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:0.75em;
+  height:90px;
+  box-sizing:border-box;
+}
+
+
+/* right container */
+
+.right-container{
+  padding:0 20px;
+  background-color:var(--light-purple-color);
+  opacity:0.9;
+}
+
+.right-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 0;
+}
+
+/* styling of the header and the paragraph in the right top container */
+.right-top-header > h3{
+  margin-bottom:0;
+}
+.right-top-header > p{
+  margin-top:0;
+}
+
+/* Styling for the account section in the right container */
+.right-account-info, .favorites{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:2em;
+}
+.right-account-info
+{
+  background-color:var(--primary-color);
+  margin:20px;
+  padding:10px;
+  color:#fff;
+  border-radius:10px;
+}
+
+.account-buttons{
+  position:relative;
+}
+.deposit, .withdraw{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  background-color:#fff;
+  border-radius:7px;
+  border:none;
+}
+
+.buttons{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1em;
+  position:absolute;
+  top:90%;
+  left:20%;
+}
+
+/* Styling for the Ethereum and Bitcoin section containing the graph */
+.eth, .btc{
+  background-color:#fff;
+  border-radius:7px;
+  padding:5px;
+}
+
+.btc__header, .eth__header{
+  display:flex;
+  align-items:center;
+  gap:1em;
+}
+
+.money-stat{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1em;
+}
+
+.btc__numbers, .eth__numbers{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  gap:2em;
+}
+#binance_graph{
+  width:50px;
+  height:50px;
+}
+
+/* Styling for the live prices section */
+.binance, .binance_info, .litecoin,.litecoin_info ,
+.ethereum,.ethereum_info, .bitcoin, .bitcoin_info
+{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.binance_stats{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.menu-icon, .side-right-icon{
+  display:none;
+}
+.close-icon-left{
+  display:none;
+}
+.close-icon-right{
+  display:none;
+}
+.prices, .money-stat, .account-buttons, .right-top, .favorites{
+  width:300px;
+}
+
+@media only screen and (max-width:767px)
+{
+  .close-icon-right{
+    display:block;
+  }
+  .big-container{
+    grid-template-columns:auto auto 2fr;
+    overflow-y:scroll;
+  }
+
+  .right-container{
+    display:none;
+    position:fixed;
+    height:100vh;
+    top:0;
+    right:0;
+    transition:all 5s ease;
+
+
+  }
+  .middle-bottom-1, .middle-bottom-2{
+    width:100vw;
+  }
+  .credit-card{
+    display:none;
+  }
+  #thedate{
+    display:none;
+  }
+  .middle-top-header > .profile > h3{
+    font-size:10px;
+  }
+  #greeting{
+    display:none;
+  }
+
+
+
+}
+
+@media only screen and (max-width:912px)
+{
+  .close-icon-left{
+    display:block;
+  }
+  .big-container{
+    grid-template-columns:auto;
+  }
+  .middle-container{
+    width:100vw;
+    margin:auto;
+    position:fixed;
+    height:100vh;
+    overflow: scroll;
+
+  }
+
+  .left-container{
+    display:none;
+    width:0;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    height:100vh;
+    transition:all 5s ease ;
+  }
+  .middle-bottom{
+    grid-template-columns:1fr;
+  }
+  .middle-bottom1-graph{
+    display:grid;
+    place-items:center;
+    width:100vw;
+    height:auto;
+  }
+  .menu-icon{
+    display:block;
+  }
+
+
+}
+@media only screen and (max-width:1024px)
+{
+  .close-icon-right{
+    display:block;
+  }
+    .big-container{
+      grid-template-columns:5em auto;
+      height:100%;
+    }
+    .right-container{
+      display:none;
+      width:90%;
+      position:fixed;
+      height:100vh;
+      top:0;
+      right:0;
+      transition:all 5s ease;
+      overflow:auto;
+      z-index:1000;
+    }
+    .right-account-info
+    {
+      width:80%;
+      margin:auto;
+    }
+    .money-stat{
+      flex-direction:column;
+      align-items:stretch;
+    }
+
+    .side-right-icon{
+      display:block;
+    }
+
+
+}
