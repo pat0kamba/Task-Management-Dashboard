@@ -10,4 +10,20 @@ ___________
 ## Images
 __________
 
-![](Screen%20Shot%20laptop)
+##laptop screenshot
+_____________________
+![](Screen%20Shot%20laptop.png)
+
+## tablet screenshots
+_______________________
+![](Screen%20Shot%20Tablet2.png)
+![](Screen%20Shot%20Tablet1.png)
+
+##mobile screenshots
+____________________
+![](Screen%20Shot%20Mobile1.png)
+![](Screen%20Shot%20Mobile2.png)
+![](Screen%20Shot%20Mobile3.png)
+
+## Deployment
+_______________
