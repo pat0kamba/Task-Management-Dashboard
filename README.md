@@ -27,3 +27,4 @@ ____________________
 
 ## Deployment
 _______________
+The website is hosted on Firebase: https://dashboard-taskmanagement-616ba.web.app
